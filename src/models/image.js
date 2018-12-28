@@ -10,7 +10,7 @@ const ImageSchema = new Schema({
     timestamp: {type:Date, default: Date.now }
 });
 
-ImageSchema.virtual('umiqueId')
+ImageSchema.virtual('uniqueId')
     .get(function(){
         return this.filename.replace(path.extname(this.filename), '')
     });
